@@ -22,6 +22,7 @@ export default function App() {
     >
       <Modal
         visible={isModalVisible}
+        onRequestClose={() => setIsModalVisible(false)}
         animationType="slide"
         style={{ backgroundColor: "lightblue", padding: 60 }}
         presentationStyle="pageSheet"

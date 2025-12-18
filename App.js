@@ -26,13 +26,42 @@ export default function App() {
         style={{ backgroundColor: "lightblue", padding: 60 }}
         presentationStyle="pageSheet"
       >
-        <View>
-          <Text>Modal Content Here</Text>
-          <Button
-            onPress={() => setIsModalVisible(false)}
-            title="Close Modal"
-            color="midnightblue"
-          />
+        <View
+          style={{
+            width: "100%",
+            height: "100%",
+            backgroundColor: "lightblue",
+          }}
+        >
+          <View style={{ padding: 10 }}>
+            <Text style={{ textAlign: "center", marginTop: 100, fontSize: 40 }}>
+              Surprise!!
+            </Text>
+          </View>
+
+          <View
+            style={{
+              position: "absolute",
+              bottom: 20,
+              left: "50%",
+              transform: [{ translateX: -75 }],
+            }}
+          >
+            <Pressable
+              onPress={() => setIsModalVisible(false)}
+              style={{
+                width: 150,
+                backgroundColor: "midnightblue",
+                paddingVertical: 12,
+                borderRadius: 5,
+                alignItems: "center",
+              }}
+            >
+              <Text style={{ color: "white", fontWeight: "600" }}>
+                Close Modal
+              </Text>
+            </Pressable>
+          </View>
         </View>
       </Modal>
       <ScrollView contentContainerStyle={{ alignItems: "center" }}>
@@ -51,7 +80,7 @@ export default function App() {
             onPress={() => setIsModalVisible(true)}
             style={{ color: "white", fontSize: 16 }}
           >
-            Press Me
+            Open A Modal
           </Text>
         </Pressable>
 

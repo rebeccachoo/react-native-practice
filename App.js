@@ -5,7 +5,7 @@ import {
   ScrollView,
   Pressable,
   Modal,
-  Button,
+  ActivityIndicator,
 } from "react-native";
 import React, { useState } from "react";
 const logo = require("./assets/icon.png");
@@ -18,8 +18,10 @@ export default function App() {
         flex: 1,
         backgroundColor: "plum",
         padding: 1,
+        paddingTop: 100,
       }}
     >
+      <ActivityIndicator />
       <Modal
         visible={isModalVisible}
         onRequestClose={() => setIsModalVisible(false)}
@@ -36,7 +38,7 @@ export default function App() {
         >
           <View style={{ padding: 10 }}>
             <Text style={{ textAlign: "center", marginTop: 100, fontSize: 40 }}>
-              Surprise!!
+              Hello
             </Text>
           </View>
 
@@ -81,7 +83,7 @@ export default function App() {
             onPress={() => setIsModalVisible(true)}
             style={{ color: "white", fontSize: 16 }}
           >
-            Open A Modal
+            Open Modal
           </Text>
         </Pressable>
 
